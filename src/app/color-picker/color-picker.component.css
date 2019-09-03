@@ -1,0 +1,52 @@
+:host, aside, header, ul {
+  display: flex;
+}
+
+aside {
+  flex-direction: column;
+}
+
+header {
+  flex-direction: column;
+}
+
+header h1, header p {
+  margin: 5px;
+}
+
+ul {
+  list-style: none;
+  border: 1px dotted black;
+  padding: 20px;
+  align-items: center;
+}
+
+ul.vertical {
+  flex-direction: column;
+}
+
+ul.horizontal {
+  flex-direction: row;
+}
+
+li.color-box {
+  flex: 1 40px;
+}
+
+li.color-box a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  border: 1px dotted gray;
+  margin: 10px 10px;
+  text-decoration: none;
+}
+
+li.color-box a.picked {
+  border: 2px solid black;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+}

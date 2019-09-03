@@ -1,0 +1,18 @@
+<header>
+  <h1>All highlights</h1>
+</header>
+
+<section>
+
+  <app-color-picker
+    [colors]="colors$ | async"
+    descriptionText="Pick color to filter highlights."
+    (picked)="filterByColor($event)"
+  ></app-color-picker>
+
+  <app-highlight-table
+    [highlights]="filteredHighlights$ | async"
+    (remove)="removeHighlight($event)"
+  ></app-highlight-table>
+
+</section>

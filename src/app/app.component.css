@@ -1,0 +1,25 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  padding: 0;
+}
+
+nav li {
+  margin: 10px 20px;
+}

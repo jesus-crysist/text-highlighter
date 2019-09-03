@@ -1,0 +1,14 @@
+<ul *ngIf="highlights?.length">
+
+  <li *ngFor="let h of highlights">
+    <mark
+      [ngStyle]="{ 'background-color': h.color }"
+    >
+      {{ h.text }}
+    </mark>
+    <button (click)="removeHighlight(h)">Remove</button>
+  </li>
+
+</ul>
+
+<p>No highlights. I suggest you create some <a routerLink="/text-highlight-area">here</a> or change your filter.</p>

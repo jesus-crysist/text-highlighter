@@ -1,0 +1,37 @@
+<aside>
+
+  <header>
+    <h1>Color picker</h1>
+  </header>
+
+  <ul *ngIf="colors?.length > 0" class="flex" [ngClass]="{ horizontal: !vertical, vertical: vertical }">
+
+    <li *ngFor="let color of colors" class="color-box">
+      <a
+        href="#"
+        [ngClass]="{ 'picked': selectedColor === color }"
+        [ngStyle]="{ 'background-color':  color, 'color': color }"
+        (click)="selectColor(color, $event)"
+        [title]="color"
+      ></a>
+    </li>
+
+    <li class="color-box">
+      <a
+        href="#"
+        [ngClass]="{ 'picked': !selectedColor }"
+        (click)="selectColor(null, $event)"
+      >
+        X
+      </a>
+    </li>
+
+  </ul>
+
+  <p *ngIf="!colors || colors?.length === 0">No highlighters to pick. Sorry</p>
+
+  <footer>
+    <p>{{ descriptionText }}</p>
+  </footer>
+
+</aside>

@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10px;
+  display: flex;
+}
+
+li mark {
+  flex-basis: 300px;
+}
+
+li button {
+  margin-left: 10px;
+  align-self: center;
+}

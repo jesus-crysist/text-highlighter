@@ -1,0 +1,11 @@
+<app-text-area
+  [highlighterColor]="highlighterColor$ | async"
+  (textHighlighted)="addHighlightedText($event)"
+></app-text-area>
+
+<app-color-picker
+  [colors]="colors$ | async"
+  [vertical]="true"
+  descriptionText="Pick highlighting color."
+  (picked)="pickColor($event)"
+></app-color-picker>
